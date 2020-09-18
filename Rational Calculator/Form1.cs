@@ -19,8 +19,8 @@ namespace Rational_Calculator
         
         private void Addition_Click(object sender, EventArgs e)
         {
-            Rational dr1 = new Rational();
-            Rational dr2 = new Rational();
+            Rational dr1;
+            Rational dr2;
             if (textBox1.Text == null || textBox2.Text == null || textBox3.Text == null || textBox4.Text == null || textBox2.Text == "0" || textBox4.Text == "0")
             {
                 MessageBox.Show("Error");
@@ -29,29 +29,96 @@ namespace Rational_Calculator
             {
                 try
                 {
+                    dr1 = new Rational(int.Parse(textBox1.Text), int.Parse(textBox2.Text));
+                    dr2 = new Rational(int.Parse(textBox3.Text), int.Parse(textBox4.Text));
+
                     Rational dr3 = dr1 + dr2;
-
+                    textBox5.Text = Convert.ToString(dr3.chis);
+                    textBox6.Text = Convert.ToString(dr3.znam);
                 }
-                catch
+                catch (Exception exception)
                 {
-
+                    MessageBox.Show(exception.Message);
                 }
             }
         }
 
         private void Subtraction_Click(object sender, EventArgs e)
         {
+            Rational dr1;
+            Rational dr2;
+            if (textBox1.Text == null || textBox2.Text == null || textBox3.Text == null || textBox4.Text == null || textBox2.Text == "0" || textBox4.Text == "0")
+            {
+                MessageBox.Show("Error");
+            }
+            else
+            {
+                try
+                {
+                    dr1 = new Rational(int.Parse(textBox1.Text), int.Parse(textBox2.Text));
+                    dr2 = new Rational(int.Parse(textBox3.Text), int.Parse(textBox4.Text));
 
+                    Rational dr3 = dr1 - dr2;
+                    textBox5.Text = Convert.ToString(dr3.chis);
+                    textBox6.Text = Convert.ToString(dr3.znam);
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(exception.Message);
+                }
+            }
         }
 
         private void Miltiplication_Click(object sender, EventArgs e)
         {
+            Rational dr1;
+            Rational dr2;
+            if (textBox1.Text == null || textBox2.Text == null || textBox3.Text == null || textBox4.Text == null || textBox2.Text == "0" || textBox4.Text == "0")
+            {
+                MessageBox.Show("Error");
+            }
+            else
+            {
+                try
+                {
+                    dr1 = new Rational(int.Parse(textBox1.Text), int.Parse(textBox2.Text));
+                    dr2 = new Rational(int.Parse(textBox3.Text), int.Parse(textBox4.Text));
 
+                    Rational dr3 = dr1 * dr2;
+                    textBox5.Text = Convert.ToString(dr3.chis);
+                    textBox6.Text = Convert.ToString(dr3.znam);
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(exception.Message);
+                }
+            }
         }
 
         private void Division_Click(object sender, EventArgs e)
         {
+            Rational dr1;
+            Rational dr2;
+            if (textBox1.Text == null || textBox2.Text == null || textBox3.Text == null || textBox4.Text == null || textBox2.Text == "0" || textBox4.Text == "0")
+            {
+                MessageBox.Show("Error");
+            }
+            else
+            {
+                try
+                {
+                    dr1 = new Rational(int.Parse(textBox1.Text), int.Parse(textBox2.Text));
+                    dr2 = new Rational(int.Parse(textBox3.Text), int.Parse(textBox4.Text));
 
+                    Rational dr3 = dr1 / dr2;
+                    textBox5.Text = Convert.ToString(dr3.chis);
+                    textBox6.Text = Convert.ToString(dr3.znam);
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(exception.Message);
+                }
+            }
         }
     }
 }
