@@ -1,0 +1,5 @@
+D:\!Works for OOP\OOP_tasks\Rational Calculator\obj\Debug\Rational Calculator.csprojAssemblyReference.cache
+D:\!Works for OOP\OOP_tasks\Rational Calculator\obj\Debug\Rational_Calculator.Form1.resources
+D:\!Works for OOP\OOP_tasks\Rational Calculator\obj\Debug\Rational_Calculator.Properties.Resources.resources
+D:\!Works for OOP\OOP_tasks\Rational Calculator\obj\Debug\Rational Calculator.csproj.GenerateResource.cache
+D:\!Works for OOP\OOP_tasks\Rational Calculator\obj\Debug\Rational Calculator.csproj.CoreCompileInputs.cache
