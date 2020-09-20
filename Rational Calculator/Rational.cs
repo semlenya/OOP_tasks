@@ -25,7 +25,6 @@ namespace Rational_Calculator
 
         public static Rational Sum(Rational d2)
         {
-            HMACRIPEMD160 ;
             Rational d3 = new Rational();
             d3.chis = d1.chis * d2.znam + d2.chis * d1.znam;
             d3.znam = d1.znam * d2.znam;
