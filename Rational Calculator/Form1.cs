@@ -38,7 +38,10 @@ namespace Rational_Calculator
 
                     Rational dr3 = dr1 + dr2;
                     textBox5.Text = Convert.ToString(dr3.chis);
-                    textBox6.Text = Convert.ToString(dr3.znam);
+                    if (dr3.znam != 1)
+                        textBox6.Text = Convert.ToString(dr3.znam);
+                    else
+                        textBox6.Text = "";
                 }
                 catch (Exception exception)
                 {
@@ -68,7 +71,10 @@ namespace Rational_Calculator
 
                     Rational dr3 = dr1 - dr2;
                     textBox5.Text = Convert.ToString(dr3.chis);
-                    textBox6.Text = Convert.ToString(dr3.znam);
+                    if (dr3.znam != 1)
+                        textBox6.Text = Convert.ToString(dr3.znam);
+                    else
+                        textBox6.Text = "";
                 }
                 catch (Exception exception)
                 {
@@ -98,7 +104,10 @@ namespace Rational_Calculator
 
                     Rational dr3 = dr1 * dr2;
                     textBox5.Text = Convert.ToString(dr3.chis);
-                    textBox6.Text = Convert.ToString(dr3.znam);
+                    if (dr3.znam != 1)
+                        textBox6.Text = Convert.ToString(dr3.znam);
+                    else
+                        textBox6.Text = "";
                 }
                 catch (Exception exception)
                 {
@@ -128,7 +137,10 @@ namespace Rational_Calculator
 
                     Rational dr3 = dr1 / dr2;
                     textBox5.Text = Convert.ToString(dr3.chis);
-                    textBox6.Text = Convert.ToString(dr3.znam);
+                    if (dr3.znam != 1)
+                        textBox6.Text = Convert.ToString(dr3.znam);
+                    else
+                        textBox6.Text = "";
                 }
                 catch (Exception exception)
                 {
