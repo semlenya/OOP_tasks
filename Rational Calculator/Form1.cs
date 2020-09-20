@@ -21,9 +21,13 @@ namespace Rational_Calculator
         {
             Rational dr1;
             Rational dr2;
-            if (textBox1.Text == null || textBox2.Text == null || textBox3.Text == null || textBox4.Text == null || textBox2.Text == "0" || textBox4.Text == "0")
+            if (textBox1.Text == null || textBox2.Text == null || textBox3.Text == null || textBox4.Text == null)
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("That's not all");
+            }
+            else if (textBox2.Text == "0" || textBox4.Text == "0")
+            {
+                MessageBox.Show("Denumerator = 0");
             }
             else
             {
@@ -47,9 +51,13 @@ namespace Rational_Calculator
         {
             Rational dr1;
             Rational dr2;
-            if (textBox1.Text == null || textBox2.Text == null || textBox3.Text == null || textBox4.Text == null || textBox2.Text == "0" || textBox4.Text == "0")
+            if (textBox1.Text == null || textBox2.Text == null || textBox3.Text == null || textBox4.Text == null)
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("That's not all");
+            }
+            else if (textBox2.Text == "0" || textBox4.Text == "0")
+            {
+                MessageBox.Show("Denumerator = 0");
             }
             else
             {
@@ -73,9 +81,13 @@ namespace Rational_Calculator
         {
             Rational dr1;
             Rational dr2;
-            if (textBox1.Text == null || textBox2.Text == null || textBox3.Text == null || textBox4.Text == null || textBox2.Text == "0" || textBox4.Text == "0")
+            if (textBox1.Text == null || textBox2.Text == null || textBox3.Text == null || textBox4.Text == null)
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("That's not all");
+            }
+            else if (textBox2.Text == "0" || textBox4.Text == "0")
+            {
+                MessageBox.Show("Denumerator = 0");
             }
             else
             {
@@ -99,9 +111,13 @@ namespace Rational_Calculator
         {
             Rational dr1;
             Rational dr2;
-            if (textBox1.Text == null || textBox2.Text == null || textBox3.Text == null || textBox4.Text == null || textBox2.Text == "0" || textBox4.Text == "0")
+            if (textBox1.Text == null || textBox2.Text == null || textBox3.Text == null || textBox4.Text == null)
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("That's not all");
+            }
+            else if (textBox2.Text == "0" || textBox4.Text == "0")
+            {
+                MessageBox.Show("Denumerator = 0");
             }
             else
             {

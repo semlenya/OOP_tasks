@@ -252,6 +252,7 @@ namespace Rational_Calculator
                     else
                         flag = true;
                 }
+                flag = false;
                 while (!flag)
                 {
                     if (d3.chis % 7 == 0 && d3.znam % 7 == 0)
@@ -262,6 +263,7 @@ namespace Rational_Calculator
                     else
                         flag = true;
                 }
+                flag = false;
                 while (!flag)
                 {
                     if (d3.chis % 6 == 0 && d3.znam % 6 == 0)
@@ -272,6 +274,7 @@ namespace Rational_Calculator
                     else
                         flag = true;
                 }
+                flag = false;
                 while (!flag)
                 {
                     if (d3.chis % 5 == 0 && d3.znam % 5 == 0)
@@ -282,6 +285,7 @@ namespace Rational_Calculator
                     else
                         flag = true;
                 }
+                flag = false;
                 while (!flag)
                 {
                     if (d3.chis % 4 == 0 && d3.znam % 4 == 0)
@@ -292,6 +296,7 @@ namespace Rational_Calculator
                     else
                         flag = true;
                 }
+                flag = false;
                 while (!flag)
                 {
                     if (d3.chis % 3 == 0 && d3.znam % 3 == 0)
@@ -302,6 +307,7 @@ namespace Rational_Calculator
                     else
                         flag = true;
                 }
+                flag = false;
                 while (!flag)
                 {
                     if (d3.chis % 2 == 0 && d3.znam % 2 == 0)
