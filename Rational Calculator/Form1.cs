@@ -16,115 +16,52 @@ namespace Rational_Calculator
         {
             InitializeComponent();
         }
-        
+
+        int cl = 0;
         private void Addition_Click(object sender, EventArgs e)
         {
-            Rational dr1;
-            Rational dr2;
-            if (textBox1.Text == null || textBox2.Text == null || textBox3.Text == null || textBox4.Text == null)
-            {
-                MessageBox.Show("That's not all");
-            }
-            else if (textBox2.Text == "0" || textBox4.Text == "0")
-            {
-                MessageBox.Show("Denumerator = 0");
-            }
-            else
-            {
-                try
-                {
-                    dr1 = new Rational(int.Parse(textBox1.Text), int.Parse(textBox2.Text));
-                    dr2 = new Rational(int.Parse(textBox3.Text), int.Parse(textBox4.Text));
-
-                    Rational dr3 = dr1 + dr2;
-                    textBox5.Text = Convert.ToString(dr3.chis);
-                    if (dr3.znam != 1)
-                        textBox6.Text = Convert.ToString(dr3.znam);
-                    else
-                        textBox6.Text = "";
-                }
-                catch (Exception exception)
-                {
-                    MessageBox.Show(exception.Message);
-                }
-            }
+            cl = 1;
+            string t1 = textBox1.Text;
+            string t2 = textBox2.Text;
+            string t3 = textBox3.Text;
+            string t4 = textBox4.Text;
+            ErrorPr(cl, t1, t2, t3, t4, textBox5, textBox6);
         }
 
         private void Subtraction_Click(object sender, EventArgs e)
         {
-            Rational dr1;
-            Rational dr2;
-            if (textBox1.Text == null || textBox2.Text == null || textBox3.Text == null || textBox4.Text == null)
-            {
-                MessageBox.Show("That's not all");
-            }
-            else if (textBox2.Text == "0" || textBox4.Text == "0")
-            {
-                MessageBox.Show("Denumerator = 0");
-            }
-            else
-            {
-                try
-                {
-                    dr1 = new Rational(int.Parse(textBox1.Text), int.Parse(textBox2.Text));
-                    dr2 = new Rational(int.Parse(textBox3.Text), int.Parse(textBox4.Text));
-
-                    Rational dr3 = dr1 - dr2;
-                    textBox5.Text = Convert.ToString(dr3.chis);
-                    if (dr3.znam != 1)
-                        textBox6.Text = Convert.ToString(dr3.znam);
-                    else
-                        textBox6.Text = "";
-                }
-                catch (Exception exception)
-                {
-                    MessageBox.Show(exception.Message);
-                }
-            }
+            cl = 1;
+            string t1 = textBox1.Text;
+            string t2 = textBox2.Text;
+            string t3 = textBox3.Text;
+            string t4 = textBox4.Text;
+            ErrorPr(cl, t1, t2, t3, t4, textBox5, textBox6);
         }
 
         private void Miltiplication_Click(object sender, EventArgs e)
         {
-            Rational dr1;
-            Rational dr2;
-            if (textBox1.Text == null || textBox2.Text == null || textBox3.Text == null || textBox4.Text == null)
-            {
-                MessageBox.Show("That's not all");
-            }
-            else if (textBox2.Text == "0" || textBox4.Text == "0")
-            {
-                MessageBox.Show("Denumerator = 0");
-            }
-            else
-            {
-                try
-                {
-                    dr1 = new Rational(int.Parse(textBox1.Text), int.Parse(textBox2.Text));
-                    dr2 = new Rational(int.Parse(textBox3.Text), int.Parse(textBox4.Text));
-
-                    Rational dr3 = dr1 * dr2;
-                    textBox5.Text = Convert.ToString(dr3.chis);
-                    if (dr3.znam != 1)
-                        textBox6.Text = Convert.ToString(dr3.znam);
-                    else
-                        textBox6.Text = "";
-                }
-                catch (Exception exception)
-                {
-                    MessageBox.Show(exception.Message);
-                }
-            }
+            cl = 1;
+            string t1 = textBox1.Text;
+            string t2 = textBox2.Text;
+            string t3 = textBox3.Text;
+            string t4 = textBox4.Text;
+            ErrorPr(cl, t1, t2, t3, t4, textBox5, textBox6);
         }
 
         private void Division_Click(object sender, EventArgs e)
         {
+            cl = 1;
+            string t1 = textBox1.Text;
+            string t2 = textBox2.Text;
+            string t3 = textBox3.Text;
+            string t4 = textBox4.Text;
+            ErrorPr(cl, t1, t2, t3, t4, textBox5, textBox6);
+        }
+        static void ErrorPr(int cl, string t1, string t2, string t3, string t4, TextBox t5, TextBox t6)
+        {
             Rational dr1;
             Rational dr2;
-            if (textBox1.Text == null || textBox2.Text == null || textBox3.Text == null || textBox4.Text == null)
-            {
-                MessageBox.Show("That's not all");
-            }
-            else if (textBox2.Text == "0" || textBox4.Text == "0")
+            if (t2 == "0" || t4 == "0")
             {
                 MessageBox.Show("Denumerator = 0");
             }
@@ -132,15 +69,119 @@ namespace Rational_Calculator
             {
                 try
                 {
-                    dr1 = new Rational(int.Parse(textBox1.Text), int.Parse(textBox2.Text));
-                    dr2 = new Rational(int.Parse(textBox3.Text), int.Parse(textBox4.Text));
+                    dr1 = new Rational(int.Parse(t1), int.Parse(t2));
+                    dr2 = new Rational(int.Parse(t3), int.Parse(t4));
 
-                    Rational dr3 = dr1 / dr2;
-                    textBox5.Text = Convert.ToString(dr3.chis);
-                    if (dr3.znam != 1)
-                        textBox6.Text = Convert.ToString(dr3.znam);
-                    else
-                        textBox6.Text = "";
+
+                    if (cl == 1)
+                    {
+                        Rational dr3 = dr1 + dr2;
+                        if (dr3.chis == dr3.znam)
+                        {
+                            dr3.chis = 1;
+                            dr3.znam = 1;
+                        }
+                        else
+                        {
+                            int c = dr3.chis, z = dr3.znam;
+                            while (c != 0 && z != 0)
+                            {
+                                if (c > z)
+                                    c %= z;
+                                else
+                                    z %= c;
+                            }
+                            dr3.chis /= c + z;
+                            dr3.znam /= c + z;
+                        }
+                        t5.Text = Convert.ToString(dr3.chis);
+                        if (dr3.znam != 1)
+                            t6.Text = Convert.ToString(dr3.znam);
+                        else
+                            t6.Text = "";
+                    }
+                    else if (cl == 2)
+                    {
+                        Rational dr3 = dr1 - dr2;
+                        if (dr3.chis == dr3.znam)
+                        {
+                            dr3.chis = 1;
+                            dr3.znam = 1;
+                        }
+                        else
+                        {
+                            int c = dr3.chis, z = dr3.znam;
+                            while (c != 0 && z != 0)
+                            {
+                                if (c > z)
+                                    c %= z;
+                                else
+                                    z %= c;
+                            }
+                            dr3.chis /= c + z;
+                            dr3.znam /= c + z;
+                        }
+                        t5.Text = Convert.ToString(dr3.chis);
+                        if (dr3.znam != 1)
+                            t6.Text = Convert.ToString(dr3.znam);
+                        else
+                            t6.Text = "";
+                    }
+                    else if (cl == 3)
+                    {
+                        Rational dr3 = dr1 * dr2;
+                        if (dr3.chis == dr3.znam)
+                        {
+                            dr3.chis = 1;
+                            dr3.znam = 1;
+                        }
+                        else
+                        {
+                            int c = dr3.chis, z = dr3.znam;
+                            while (c != 0 && z != 0)
+                            {
+                                if (c > z)
+                                    c %= z;
+                                else
+                                    z %= c;
+                            }
+                            dr3.chis /= c + z;
+                            dr3.znam /= c + z;
+                        }
+                        t5.Text = Convert.ToString(dr3.chis);
+                        if (dr3.znam != 1)
+                            t6.Text = Convert.ToString(dr3.znam);
+                        else
+                            t6.Text = "";
+                    }
+                    else if (cl == 4)
+                    {
+                        Rational dr3 = dr1 / dr2;
+                        if (dr3.chis == dr3.znam)
+                        {
+                            dr3.chis = 1;
+                            dr3.znam = 1;
+                        }
+                        else
+                        {
+                            int c = dr3.chis, z = dr3.znam;
+                            while (c != 0 && z != 0)
+                            {
+                                if (c > z)
+                                    c %= z;
+                                else
+                                    z %= c;
+                            }
+                            dr3.chis /= c + z;
+                            dr3.znam /= c + z;
+                        }
+                        t5.Text = Convert.ToString(dr3.chis);
+                        if (dr3.znam != 1)
+                            t6.Text = Convert.ToString(dr3.znam);
+                        else
+                            t6.Text = "";
+                    }
+
                 }
                 catch (Exception exception)
                 {
@@ -148,5 +189,7 @@ namespace Rational_Calculator
                 }
             }
         }
+
+
     }
 }
