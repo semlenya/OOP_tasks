@@ -17,7 +17,7 @@ namespace Rational_Calculator
         {
 
         }
-        public Rational( int ch, int zn)
+        public Rational(int ch, int zn)
         {
             chis = ch;
             znam = zn;
@@ -28,11 +28,6 @@ namespace Rational_Calculator
             Rational d3 = new Rational();
             d3.chis = d1.chis * d2.znam + d2.chis * d1.znam;
             d3.znam = d1.znam * d2.znam;
-            if (d3.chis == d3.znam)
-            {
-                d3.chis = 1;
-                d3.znam = 1;
-            }
             return d3;
         }
 
@@ -41,11 +36,6 @@ namespace Rational_Calculator
             Rational d3 = new Rational();
             d3.chis = d1.chis * d2.znam - d2.chis * d1.znam;
             d3.znam = d1.znam * d2.znam;
-            if (d3.chis == d3.znam)
-            {
-                d3.chis = 1;
-                d3.znam = 1;
-            }
             return d3;
         }
         public static Rational Umn(Rational d1, Rational d2)
@@ -53,11 +43,6 @@ namespace Rational_Calculator
             Rational d3 = new Rational();
             d3.chis = d1.chis * d2.chis;
             d3.znam = d1.znam * d2.znam;
-            if (d3.chis == d3.znam)
-            {
-                d3.chis = 1;
-                d3.znam = 1;
-            }
             return d3;
         }
         public static Rational Del(Rational d1, Rational d2)
@@ -65,11 +50,6 @@ namespace Rational_Calculator
             Rational d3 = new Rational();
             d3.chis = d1.chis * d2.znam;
             d3.znam = d1.znam * d2.chis;
-            if (d3.chis == d3.znam)
-            {
-                d3.chis = 1;
-                d3.znam = 1;
-            }
             return d3;
         }
         public static Rational operator +(Rational d1, Rational d2)
@@ -88,5 +68,6 @@ namespace Rational_Calculator
         {
             return Del(d1, d2);
         }
+
     }
 }
