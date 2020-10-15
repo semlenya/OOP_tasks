@@ -82,7 +82,8 @@ namespace Rational_Calculator
             }
             else
             {
-                int c = dr3.chis, z = dr3.znam;
+                int c = dr3.chis;
+                int z = dr3.znam;
                 while (c != 0 && z != 0)
                 {
                     if (c > z)
